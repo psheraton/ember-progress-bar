@@ -57,6 +57,8 @@ export default Component.extend({
 
     get(this, 'progressBar').animate(progress, () => {
       if (this.get('onAnimationComplete')) this.get('onAnimationComplete')();
+    }).catch((er) => {
+      // I don't care about this
     });
   },
 
